@@ -19,7 +19,9 @@ export default function Header() {
             <li>
               <Link to='/products'>Products</Link>
             </li>
-          </div>
+          </div><li>
+            <Link to='/'></Link>
+          </li>
           <div>
             <li>
               <Link to='/login'>Login</Link>
