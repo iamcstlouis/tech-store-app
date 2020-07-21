@@ -1,5 +1,12 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+
+import logo from '../assets/logo.svg'
 
 export default function Header() {
-  return <h1>hello from header</h1>;
+  return (
+    <header className="header">
+      <img src={logo} alt="Vintage Tech Logo" className='logo' />
+    </header>
+    );
 }
