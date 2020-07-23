@@ -6,10 +6,8 @@ import ProductList from '../components/Products/ProductList'
 export default function Products() {
   const { loading, products } = React.useContext(ProductContext);
 
-  console.log(products)
   if (loading) {
     return <Loading />
   }
-
   return <ProductList title='our products' products={products} />
 }
