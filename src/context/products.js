@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from 'axios'
+import url from '../utils/URL'
 
 export const ProductContext = React.createContext();
 
@@ -9,6 +11,14 @@ export default function ProductProvider({ children }) {
     const [loading, setLoading] = React.useState(false);
     const [products, setProducts] = React.useState([]);
     const [featured, setfeatured] = React.useState([]);
+
+    React.useEffect(() => {
+        axios.get(`${url}/products`)
+            .then(storeProducts => console.log(storeProducts));
+        return () => {
+
+        }
+    });
 
     return (
         <ProductContext.Provider value={{ loading, products, featured }}>
