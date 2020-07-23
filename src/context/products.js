@@ -14,11 +14,12 @@ export default function ProductProvider({ children }) {
 
     React.useEffect(() => {
         axios.get(`${url}/products`)
-            .then(storeProducts => console.log(storeProducts));
+            .then(response => {
+                setProducts(response.data);
+            });
         return () => {
-
-        }
-    });
+        };
+    }, []);
 
     return (
         <ProductContext.Provider value={{ loading, products, featured }}>
