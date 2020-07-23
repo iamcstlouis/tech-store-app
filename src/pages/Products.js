@@ -4,6 +4,7 @@ import Loading from '../components/Loading'
 import ProductList from '../components/Products/ProductList'
 
 export default function Products() {
+  // This gives access to the specified properties in the context (loading, products)
   const { loading, products } = React.useContext(ProductContext);
 
   if (loading) {
