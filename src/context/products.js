@@ -5,7 +5,7 @@ import { featuredProducts } from '../utils/helpers'
 
 export const ProductContext = React.createContext();
 
-// Provider, Consumer, useContext()
+// createContext gives context to Provider, Consumer, useContext()
 
 export default function ProductProvider({ children }) {
 
